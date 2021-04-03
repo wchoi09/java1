@@ -1,15 +1,8 @@
-public class AccountingMethodApp {
+class Accounting {
     public static double valueOfSupply;
     public static double vatRate;
     public static double expenseRate;
-    public static void main(String[] args) {
-        valueOfSupply = 10000;
-        vatRate = 0.1;
-        expenseRate = 0.3;
-        print();
-    }
-
-    private static void print() {
+    public static void print() {
         System.out.println("Value of supply: "+valueOfSupply);
         System.out.println("VAT: : "+getVAT());
         System.out.println("Total : "+getTotal());
@@ -47,4 +40,15 @@ public class AccountingMethodApp {
     private static double getVAT() {
         return valueOfSupply*vatRate;
     }
+}
+public class AccountingClassApp {
+    
+    public static void main(String[] args) {
+        Accounting.valueOfSupply = 10000;
+        Accounting.vatRate = 0.1;
+        Accounting.expenseRate = 0.3;
+        Accounting.print();
+        // anotherVariable = ...;
+        // anotherMethod = ...;
+    }    
 }
